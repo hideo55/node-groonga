@@ -24,31 +24,31 @@
 
 ### Constructor(options)
 
-*options
-  *`protocol` : supported only 'http'
-  *`host` : groonga host address
-  *`port` : groonga port
-  *`resultObjectMapper` : 'default' or function to mapping grroonga result object.
+* options
+  * `protocol` : supported only 'http'
+  * `host` : groonga host address
+  * `port` : groonga port
+  * `resultObjectMapper` : 'default' or function to mapping grroonga result object.
 
 ### select(table,options,cb)
-*`table` : table name
-*`options`
-  *`match_columns`
-  *`query`
-  *`filter`
-  *`scorer`
-  *`sortby`
-  *`output_columns`
-  *`offset`
-  *`limit`
-  *`drilldown`
-  *`drilldown_sortby`
-  *`drilldown_output_columns`
-  *`drilldown_offset`
-  *`drilldown_limit`
-  *`cacge`
-  *`match_escalation_threshold`
-*`cb` : callbak
+* `table` : table name
+* `options`
+  * `match_columns`
+  * `query`
+  * `filter`
+  * `scorer`
+  * `sortby`
+  * `output_columns`
+  * `offset`
+  * `limit`
+  * `drilldown`
+  * `drilldown_sortby`
+  * `drilldown_output_columns`
+  * `drilldown_offset`
+  * `drilldown_limit`
+  * `cacge`
+  * `match_escalation_threshold`
+* `cb` : callbak
 
 ## TODO
 
