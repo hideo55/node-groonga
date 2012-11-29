@@ -1,18 +1,18 @@
 
 # node-groonga
 
-  Interface to groonga
+  groonga interface for Node.js
 
 ## Tutorial
 
-	var Groonga = require(‘groonga’);
-	var g = new Groonga({
+	var Groonga = require(‘groonga’).Groonga;
+	var groonga = new Groonga({
 		host : ‘example.com’,
 		port : 10041,
 		resultObjectMapper : ‘default’
 	});
 
-	g.select(‘Books’,{
+	groonga.select(‘Books’,{
 		match_columns : ‘title’,
 		query : ‘foo’
 	},function(err,res){
@@ -30,7 +30,7 @@
   * `port` : groonga port
   * `resultObjectMapper` : 'default' or function to mapping grroonga result object.
 
-### select(table,options,cb)
+### select(table, options, cb)
 * `table` : table name
 * `options`
   * `match_columns`
@@ -50,10 +50,46 @@
   * `match_escalation_threshold`
 * `cb` : callbak
 
+### createTable(name, options, cb)
+
+### removeTable(name, options, cb)
+
+### getTableList(cb)
+
+### createColumn(table, name, flags, type, options, cb)
+
+### removeColumn(table, name, cb)
+
+### getColumnList(table, cb)
+
+### defineSelector(name, table, options, cb)
+
+### defrag(objname, threshold, cb)
+
+### deleteRecord(table, options, cb)
+
+### dump(tables, cb)
+
+### load(table, values, options, cb)
+
+### suggest(types, table, column, query, cb)
+
+### getStatus(cb)
+
+### shutdown(cb)
+
+### quit(cb)
+
+### logLevel(level, cb)
+
+### logPut(level, message, cb)
+
+### logReopen(cb)
+
+### addView(view, table, cb)
+
 ## TODO
 
-* gqtp support
-* memcached binary protocol support
 * tests
 * documents
 
